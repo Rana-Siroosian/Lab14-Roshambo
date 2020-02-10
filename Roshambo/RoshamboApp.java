@@ -170,11 +170,23 @@ public class RoshamboApp {
 				loop = false;
 		
 		}while 	(loop);
-		
+		int totalLoss = totalPlay - totalWins;
 		System.out.println("----------------------------------------");
 		System.out.println("Here's your score " + humanPlayer.name +":\n");
-		System.out.println("You won " + totalWins + " times.");
-		System.out.println("You lost " + (totalPlay - totalWins) + " times.");
+		System.out.println("You played " + totalPlay + " times.");
+		if(totalWins == 1) {
+			System.out.println("You won " + totalWins + " time.");
+		}
+		else {
+			System.out.println("You won " + totalWins + " times.");
+		}
+		if(totalLoss == 1) {
+			
+			System.out.println("You lost " + totalLoss + " time.");
+		}
+		else {
+			System.out.println("You lost " + totalLoss + " times.");
+		}
 		System.out.println("----------------------------------------");
 
 		System.out.println("\nHave a great day!");
